@@ -1,12 +1,2 @@
 <h1>Create your profile</h1>
-<%= simple_form_for @profile,:html => {:class => "form-horizontal"} do |f| %>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :date_of_birth, :as =>'date',
-                start_year: Date.today.year - 90,
-                end_year: Date.today.year  %>
-    <%= f.input :profile_image ,:as =>  'file' %>
-    <div class =" form-actions">
-    <%= f.submit :CreateProfile %>
-    </div>
-<% end %>
+<%= render 'form' %>

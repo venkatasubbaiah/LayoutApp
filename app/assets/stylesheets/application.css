@@ -13,9 +13,21 @@
  *= require_tree .
  */
 .content {
-    min-height: 400px;
+    min-height: 500px;
 }
 .form-actions {
     background-color: #ffffff;
     border-top: none;
 }
+.imagediv{
+    width: 140px;
+    height: 340px;
+    float: left;
+
+}
+.contentdiv {
+    float: right;
+    width: 790px;
+    height: 340px;
+}
+

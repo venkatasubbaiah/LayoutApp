@@ -8,9 +8,10 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
+  has_one :profile
+
 
   after_create :send_welcome_email
-  after_create :create_profile
 
   private
 
@@ -18,7 +19,5 @@ class User < ActiveRecord::Base
     SignupNotifier.signedup(self).deliver
   end
 
-  def create_profile
 
-  end
 end

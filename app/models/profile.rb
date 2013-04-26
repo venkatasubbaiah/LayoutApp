@@ -6,6 +6,9 @@ class Profile < ActiveRecord::Base
   validates_date :date_of_birth, :before => lambda { 18.years.ago },
                  :before_message => "must be at least 18 years old"
 
+  belongs_to :user
+
+
   has_attached_file :profile_image,
                     :default_url => "/assets/default.ico",
                     :styles => { :medium => "300x300>", :thumb => "16x16>"}

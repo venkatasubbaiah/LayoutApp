@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130426044822) do
 
   create_table "profiles", :force => true do |t|
+    t.integer  "user_id"
     t.string   "first_name"
     t.string   "last_name"
     t.date     "date_of_birth"
