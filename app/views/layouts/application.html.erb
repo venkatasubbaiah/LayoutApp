@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Layoutapp</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <%= link_to "Layout App", "/home/main", :class => "brand" %>
+        <ul class="nav">
+          <li class="active"> <%= link_to "Home", "/home/index" %></li>
+          <li><%= link_to "About us", "/home/aboutus" %></li>
+          <li><%= link_to "Contact us", "/home/contactus" %></li>
+        </ul>
+        <ul class="nav pull-right">
+          <li class="active">
+            <% if ! user_signed_in? %>
+                 <%= link_to "Sign Up !", new_user_registration_path  %>
+                <% else %>
+                      <%= link_to "Hi, "+current_user.email,""  %>
+            <% end %>
+          </li>
+          <li>
+            <% if ! user_signed_in? %>
+                <%= link_to "Sign In",new_user_session_path  %>
+                <% else %>
+                <%= link_to "Logout" ,destroy_user_session_path, :method => :delete  %>
+                <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <p class="notice"><%= notice %></p>
+      <%= yield %>
+  </div>
+  <div class ="breadcrumb">
+    <center>© 2010-2013 Startup sourcing.  All Rights Reserved</center>
+   </div>
+
+  </div>
+</body>
+</html>
