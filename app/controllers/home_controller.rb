@@ -7,4 +7,7 @@ class HomeController < ApplicationController
   end
   def main
   end
+  def products
+
+  end
 end

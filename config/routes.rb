@@ -4,6 +4,7 @@ Layoutapp::Application.routes.draw do
   get "/home/aboutus"
   get "home/contactus"
   get "home/index"
+  get "/home/products"
 
   resources :home
 
