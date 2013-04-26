@@ -1,5 +1,7 @@
 Layoutapp::Application.routes.draw do
 
+  resources :profiles
+
   get '/home/main'
   get "/home/aboutus"
   get "home/contactus"

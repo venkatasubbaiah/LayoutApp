@@ -10,10 +10,15 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   after_create :send_welcome_email
+  after_create :create_profile
 
   private
 
   def send_welcome_email
     SignupNotifier.signedup(self).deliver
+  end
+
+  def create_profile
+
   end
 end
