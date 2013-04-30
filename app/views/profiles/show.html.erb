@@ -1,25 +1,26 @@
 <h1>Profile Details are</h1>
 
-<div class="imagediv">
-  <%= image_tag @profile.profile_image.url(:medium),
-                :class => "img-polaroid" %>   <br/>
-  <%= link_to current_user == @profile.user ? "Edit Image" : "", edit_profile_path(@profile) %>
-</div>
-
-<div class="contentdiv">
-  <table>
-    <tr>
-      <td><b>First Name:</b></td>
-      <td><%= @profile.first_name %></td>
-    </tr>
-    <tr>
-      <td><b>Last Name:</b></td>
-      <td><%= @profile.last_name %></td>
-    </tr>
-    <tr>
-      <td><b>DateOfBirth:</b></td>
-      <td><%= @profile.date_of_birth %></td>
-    </tr>
-  </table>
-  <%= link_to current_user == @profile.user ? "Edit Profile" : " ", edit_profile_path(@profile) %>
+<div class="row">
+  <div class="span3">
+    <%= image_tag @profile.profile_image.url(:medium),
+                  :class => "img-polaroid" %>   <br/>
+    <%= link_to current_user == @profile.user ? "Edit Image" : "", edit_profile_path(@profile) %>
+  </div>
+  <div class="span9">
+    <table>
+      <tr>
+        <td><b>First Name:</b></td>
+        <td><%= @profile.first_name %></td>
+      </tr>
+      <tr>
+        <td><b>Last Name:</b></td>
+        <td><%= @profile.last_name %></td>
+      </tr>
+      <tr>
+        <td><b>DateOfBirth:</b></td>
+        <td><%= @profile.date_of_birth %></td>
+      </tr>
+    </table>
+    <%= link_to current_user == @profile.user ? "Edit Profile" : " ", edit_profile_path(@profile) %>
+  </div>
 </div>
