@@ -7,6 +7,8 @@ class HomeController < ApplicationController
     flash[:xxx]  = 'xxx'
     flash[:my_flash] = 'my_flash'
     flash[:thisismine] = 'this is mine'
+    flash[:another_custom_type]="custom message"
+    flash[:venkat] ="this is another custom flash"
   end
   def aboutus
   end

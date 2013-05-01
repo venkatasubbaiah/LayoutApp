@@ -38,23 +38,11 @@
   </div>
 
   <div class="content">
-    <% if flash[:error] %>
-        <p><%= flash[:error] %></p>
+    <% flash.each do |key, value| %>
+        <div class="flash <%= "alert alert-#{key}" %>">
+          <%= value %>
+        </div>
     <% end %>
-    <% if flash[:notice] %>
-        <p><%= flash[:notice] %></p>
-    <% end %>
-    <% if flash[:success] %>
-        <p><%= flash[:success] %></p>
-    <% end %>
-    <% if flash[:xxx] %>
-        <p><%= flash[:xxx] %></p>
-    <% end %>
-    <% if flash[:my_flash] %>
-        <p><%= flash[:my_flash] %></p>
-    <% end %>
-
-
     <%= yield %>
   </div>
   <div class="breadcrumb">
