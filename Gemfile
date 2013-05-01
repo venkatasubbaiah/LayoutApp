@@ -11,6 +11,8 @@ gem 'simple_form'
 gem "paperclip"
 gem 'validates_timeliness'
 gem 'omniauth-facebook'
+gem 'fb_graph'
+gem 'nokogiri'
 
 
 

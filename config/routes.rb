@@ -1,4 +1,9 @@
 Layoutapp::Application.routes.draw do
+  resources :friends do
+    collection do
+      get 'get_my_friends'
+    end
+  end
   match '/auth/:provider/callback' => 'authentications#create'
 
   resources :profiles

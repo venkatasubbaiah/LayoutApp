@@ -21,6 +21,8 @@
         <td><%= @profile.date_of_birth %></td>
       </tr>
     </table>
-    <%= link_to current_user == @profile.user ? "Edit Profile" : " ", edit_profile_path(@profile) %>
+    <%= link_to current_user == @profile.user ? "Edit Profile" : " ", edit_profile_path(@profile) %> <br/><br/>
+    <%= link_to "My Friends", friends_path%>
+
   </div>
 </div>

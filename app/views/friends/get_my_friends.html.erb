@@ -1,0 +1,9 @@
+<h2>List of friends are </h2>
+<% @friends.each do |friend| %>
+
+    <p>
+      <%= friend['name'] %> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+      <%= friend['uid'] %>
+
+    </p>
+<% end  %>

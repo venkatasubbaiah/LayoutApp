@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   has_one :profile
   has_many :authentications, :dependent => :delete_all
+  has_many :friends ,:dependent => :delete_all
 
   def apply_omniauth(auth)
     self.email = auth['extra']['raw_info']['email']
