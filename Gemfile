@@ -13,6 +13,8 @@ gem 'validates_timeliness'
 gem 'omniauth-facebook'
 gem 'fb_graph'
 gem 'nokogiri'
+gem 'will_paginate'
+gem "geocoder"
 
 
 

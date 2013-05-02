@@ -1,2 +1,23 @@
-<h2>My Friends</h2>
-<%= link_to 'Get My Friends', get_my_friends_friends_path %>
+<div class='page-header' xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+     xmlns="http://www.w3.org/1999/html">
+  <h4>My Friends</h4>
+</div>
+<table class="table table-bordered">
+  <% @friends.each do |friend| %>
+      <tr>
+        <td>
+        <div class="row">
+          <div class="span1">
+              <%= image_tag "http://graph.facebook.com/#{friend.facebook_uid}/picture?type=square" %>
+
+          </div>
+          <div class="span10">
+              <b><%= friend.name %></b>  <br>
+              <%= friend.city %>
+          </div>
+        </div>
+        </td>
+      </tr>
+  <% end %>
+</table>
+
