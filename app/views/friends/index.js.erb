@@ -1,0 +1,3 @@
+$('.user_friends_table').append("<%= escape_javascript(render @friends)%>");
+
+$('#next_page_no').val(<%= @friends.next_page%>);

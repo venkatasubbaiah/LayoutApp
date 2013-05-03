@@ -6,8 +6,5 @@ class Friend < ActiveRecord::Base
   geocoded_by :city
 
   after_validation :geocode
-  validates :facebook_uid, :uniqueness => true
-
-
-
+  validates :facebook_uid, :uniqueness => { :scope => :user_id  }
 end
