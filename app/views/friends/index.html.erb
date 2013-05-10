@@ -2,13 +2,14 @@
      xmlns="http://www.w3.org/1999/html">
   <h4>My Friends</h4>
 </div>
-
+<div class= "map_view"> <%= link_to "Map View", map_friends_path, :class =>"btn btn-primary   "%></div>
 <table class="table table-bordered user_friends_table">
   <%= render @friends %>
 </table>
 
 <%= hidden_field_tag :next_page_no, @friends.next_page %>
-<%= hidden_field_tag :total_no_pages, @friends.total_pages  %>
+<%= hidden_field_tag :total_no_pages, @friends.total_pages %>
+
 
 
 

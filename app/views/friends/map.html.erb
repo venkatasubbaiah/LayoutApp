@@ -1,1 +1,12 @@
 <h1>Map view </h1>
+<div class ="my_map">
+  <% @all_friend_details.each do |friend| %>
+     <script>
+      $('.my_map').gmap3({
+      marker:{
+      latLng:[<%= friend["laptitude"] %>,<%= friend["longitude"] %>]
+      }
+      });
+     </script>
+  <% end %>
+</div>

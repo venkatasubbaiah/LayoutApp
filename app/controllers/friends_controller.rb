@@ -10,6 +10,12 @@ class FriendsController < ApplicationController
   end
 
   def map
+    @friends = current_user.friends.all
+    @all_friend_details = []
+    @friends.each do |friend|
+       friend_details = {"name" => friend.name,"city" => friend.city,"laptitude" => friend.latitude, "longitude" => friend.longitude}
+       @all_friend_details << friend_details
 
+    end
   end
 end
