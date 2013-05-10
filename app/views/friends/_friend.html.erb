@@ -1,6 +1,12 @@
 <tr>
   <td>
-    <%= image_tag "http://graph.facebook.com/#{friend.facebook_uid}/picture?type=square" %>
-    <b><%= friend.name %></b> <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= friend.city %>
+    <div class="friend clearfix">
+      <%= image_tag "http://graph.facebook.com/#{friend.facebook_uid}/picture?type=square" %>
+      <div class="info">
+        <strong><%= friend.name %></strong><br>
+        <%= friend.city %>
+
+      </div>
+    </div>
   </td>
 </tr>

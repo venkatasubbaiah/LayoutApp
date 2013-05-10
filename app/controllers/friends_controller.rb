@@ -7,4 +7,8 @@ class FriendsController < ApplicationController
       format.html
     end
   end
+
+  def map
+
+  end
 end

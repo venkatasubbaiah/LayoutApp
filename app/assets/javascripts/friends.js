@@ -1,5 +1,7 @@
 $(function () {
+
     $(window).scroll(function (e) {
+        console.log('friends index');
         e.preventDefault();
         if ($(window).scrollTop() + $(window).height() == $(document).height()) {
             var next_page_no = $('#next_page_no').val();
@@ -10,9 +12,10 @@ $(function () {
             if ($next < $total) {
                 $.get('/friends', {page: next_page_no},
                     function () {
-                });
+                    });
             }
         }
     });
-});
+})
+;
 
